@@ -1,5 +1,7 @@
 # Bank Client Discovery Simulator
 
+## ultra-Simplified version, can always make it better.
+
 Students practise interviewing a bank client. They pick a client, ask questions to find what the client really needs,
 recommend products, and get feedback from an AI coach.
 
