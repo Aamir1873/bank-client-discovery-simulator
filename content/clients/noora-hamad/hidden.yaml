@@ -1,0 +1,44 @@
+hidden_needs:
+  - id: housing-gap
+    label: Housing loan gap
+    fact: >
+      They are approved for the government housing loan of up to QAR 1.2 million, but the build estimate
+      is about QAR 1.6 million. They need roughly QAR 400,000 on top.
+    reveal_when: Asked how they plan to pay for the build, what the build costs, or about other support they have.
+    keywords: [pay for, fund, cost, estimate, budget, government, housing loan, support]
+    while_closed: Say they have looked at a few builders.
+    importance: critical
+
+  - id: sharia
+    label: Sharia only
+    fact: They will only accept Sharia-compliant products.
+    reveal_when: Asked about their banking preferences or values, or offered anything with interest, such as an overdraft, a mortgage, a credit card or a loan with interest, or about any rules, principles, faith or family values they follow with money or financing.
+    keywords: [prefer, preference, matters to you, values, interest, islamic, sharia, conventional, overdraft, mortgage, credit card, loan with interest]
+    while_closed: Says it depends on what the product is.
+    importance: critical
+
+  - id: bakery
+    label: Noora's bakery
+    fact: Besides her ministry job, Noora runs a home bakery in the evenings and wants a separate account for it.
+    reveal_when: Asked what each of them does for work, or about a side business or extra income.
+    keywords: [income, work, job, each of you, plans, side, business, bakery]
+    while_closed: Noora says she works in a ministry.
+    importance: moderate
+
+  - id: short-term
+    label: Debt-free in 10 years
+    fact: They want to be debt-free within 10 years.
+    reveal_when: Asked how they feel about repayment terms, how long they want to be paying, or monthly payments.
+    keywords: [years, term, repay, repayment, how long, monthly payment, comfortable]
+    while_closed: Hamad says they want something sensible.
+    importance: moderate
+
+suitable_products: [istisna-build, startup-biz]
+
+unsuitable_products:
+  - id: conv-mortgage
+    why: Interest-based. They only accept Sharia-compliant products.
+  - id: conv-cashback-card
+    why: Interest-based, and it does nothing for the build.
+  - id: islamic-personal
+    why: Personal finance for a house is the wrong tool; build finance can top up the government loan.

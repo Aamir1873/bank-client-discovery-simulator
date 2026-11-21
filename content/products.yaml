@@ -1,0 +1,141 @@
+# The bank's product catalogue. Every product is invented for training.
+# The catalogue mixes Islamic and conventional products on purpose; a real bank in Qatar offers one or the other.
+# Edit freely: the app reads this file on each request.
+#
+# group: accounts | savings | business_finance | personal_finance | home_finance | cards
+# type:  islamic | conventional
+
+groups:
+  - id: accounts
+    name: Accounts
+  - id: savings
+    name: Savings
+  - id: business_finance
+    name: Business finance
+  - id: personal_finance
+    name: Personal finance
+  - id: home_finance
+    name: Home finance
+  - id: cards
+    name: Cards
+
+products:
+  - id: global-current
+    name: Global Current Account
+    group: accounts
+    type: conventional
+    features:
+      - Low fixed fee on international transfers
+      - Salary transfer perks
+      - Linked savings pocket you can move money in and out of any time
+    limitations:
+      - QAR 5,000 minimum balance, or a monthly fee
+
+  - id: startup-biz
+    name: Startup Business Account
+    group: accounts
+    type: islamic
+    features:
+      - Low minimum balance
+      - Online payment gateway and card acceptance
+      - Separate business statements
+    limitations:
+      - No credit facilities in the first 12 months
+
+  - id: fixed-5y
+    name: 5-Year Fixed Deposit
+    group: savings
+    type: conventional
+    features:
+      - The highest rate in the catalogue
+    limitations:
+      - Money is locked for 5 years
+      - Heavy penalty for early withdrawal; leaving early loses the interest
+
+  - id: islamic-receivables
+    name: Receivables Finance
+    group: business_finance
+    type: islamic
+    features:
+      - Advance up to 80% of approved invoices
+      - Repaid when your customer pays the invoice
+    limitations:
+      - Only invoices from approved payers
+      - Needs 2 years of audited accounts
+
+  - id: islamic-murabaha-wc
+    name: Murabaha Working Capital
+    group: business_finance
+    type: islamic
+    features:
+      - The bank buys goods or materials and sells them to you on deferred terms
+    limitations:
+      - Funds specific purchases only, not wages or cash
+
+  - id: conv-overdraft
+    name: Business Overdraft
+    group: business_finance
+    type: conventional
+    features:
+      - Draw any time up to a limit
+      - Interest only on the balance you use
+    limitations:
+      - Interest-based
+      - Renewed every year
+      - Needs collateral
+
+  - id: islamic-personal
+    name: Personal Finance
+    group: personal_finance
+    type: islamic
+    features:
+      - Up to 20 times your monthly salary
+      - Fixed profit rate, up to 6 years
+    limitations:
+      - Your salary must be transferred to the bank
+      - Monthly payment capped at half your salary
+      - For personal needs only, not business costs
+
+  - id: istisna-build
+    name: Istisna Build Finance
+    group: home_finance
+    type: islamic
+    features:
+      - The bank finances building your home in stages, then you repay over up to 20 years
+      - Can top up a government housing loan
+    limitations:
+      - Property valuation required
+      - Debt-to-income cap
+
+  - id: conv-mortgage
+    name: Home Mortgage
+    group: home_finance
+    type: conventional
+    features:
+      - Up to 25 years
+      - Variable rate
+    limitations:
+      - Interest-based
+      - Arrangement fee
+
+  - id: conv-cashback-card
+    name: Cashback Credit Card
+    group: cards
+    type: conventional
+    features:
+      - 1% cashback on all spending
+      - Up to 55 days interest-free
+    limitations:
+      - Interest charged on any unpaid balance
+      - QAR 300 yearly fee
+
+  - id: islamic-covered-card
+    name: Covered Card
+    group: cards
+    type: islamic
+    features:
+      - Fixed monthly fee instead of interest
+      - Travel cover included
+    limitations:
+      - Monthly fee is charged even when the card is not used
+      - Limit set by your salary

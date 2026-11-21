@@ -1,0 +1,28 @@
+# What the student can see, and how Khalid talks. His hidden needs are in hidden.yaml.
+id: khalid
+name: Khalid
+intro: Fit-out subcontractor, Industrial Area     # one line on the picker card
+difficulty: hard                                  # easy | medium | hard
+opening_line: "I need a loan to grow. We're winning bigger contracts."
+
+persona: >
+  Qatari business owner in his forties. Busy and direct, short answers. Proud of the business.
+  He doesn't volunteer problems, but he is honest: when the banker asks him straight, he tells the truth.
+
+background: >
+  Runs a fit-out subcontracting firm in the Industrial Area for six years. Fits out offices and villas
+  for main contractors. Work is growing and he has just won bigger contracts.
+
+# The "before you meet" brief and the client file panel. Bands, like a bank record.
+known:
+  - label: Revenue a month
+    value: QAR 400-500k
+  - label: Staff
+    value: "38"
+  - label: Years trading
+    value: "6"
+  - label: With us
+    value: Business account, 3 years
+
+stated_needs:
+  - Wants a loan to take on bigger contracts

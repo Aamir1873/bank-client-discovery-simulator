@@ -1,0 +1,49 @@
+# What Khalid keeps back. Never sent to the browser before the coach's feedback.
+#
+# reveal_when:  the kind of question that opens this need (read by the client and the hint)
+# keywords:     words that usually mean the question is about it (a fallback check)
+# while_closed: what he may say about the topic before it is opened, so he never contradicts himself
+# importance:   critical | moderate
+
+hidden_needs:
+  - id: late-payments
+    label: Late payments
+    fact: Main contractors pay 90 to 120 days after the invoice. The real problem is cash flow, not growth.
+    reveal_when: Asked about his customers, how or when he gets paid, payment terms, receivables or cash flow.
+    keywords: [paid, pay you, paying you, payment, customers, clients, contractors, invoice, cash flow, receivable]
+    while_closed: Says business is good and the contracts are big.
+    importance: critical
+
+  - id: payroll
+    label: Nearly missed paying wages
+    fact: Twice this year he nearly missed paying his 38 workers on time through the Wage Protection System, because the contractors had not paid him yet.
+    reveal_when: Asked about staff costs, wages, his biggest monthly costs or monthly obligations.
+    keywords: [wages, salaries, staff, workers, employees, payroll, costs, expenses, monthly, obligations, WPS]
+    while_closed: Says he has a good team.
+    importance: critical
+
+  - id: sharia
+    label: Sharia only
+    fact: He will only accept Sharia-compliant products. Interest is not acceptable to him.
+    reveal_when: Asked about his banking preferences or values, or offered anything with interest, such as an overdraft, a mortgage, a credit card or a loan with interest, or about any rules, principles, faith or family values they follow with money or financing.
+    keywords: [prefer, preference, matters to you, values, interest, islamic, sharia, conventional, overdraft, mortgage, credit card, loan with interest]
+    while_closed: Says it depends on what the product is.
+    importance: critical
+
+  - id: supplier-debt
+    label: Supplier debt
+    fact: He owes his suppliers about QAR 120,000 and is embarrassed about it.
+    reveal_when: Asked directly whether he owes money or has existing debts or loans.
+    keywords: [owe, owing, debt, debts, loans, borrowed, outstanding, liabilities, credit]
+    while_closed: Changes the subject back to the new contracts.
+    importance: moderate
+
+suitable_products: [islamic-receivables]
+
+unsuitable_products:
+  - id: conv-overdraft
+    why: Interest-based. He only accepts Sharia-compliant products.
+  - id: islamic-murabaha-wc
+    why: Funds purchases of goods, not wages. It does not solve his payroll problem.
+  - id: islamic-personal
+    why: Personal finance for a business problem, and it can't be used for business costs.

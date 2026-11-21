@@ -1,0 +1,149 @@
+# The leak test. For each client:
+#   vague:    questions that must not bring out any hidden need (asked in one conversation, in order)
+#   triggers: one question per hidden need, each asked in a fresh conversation after the opening;
+#             only that need may come out
+# Run: python scripts/leak_test.py --model <model> --runs 3
+
+khalid:
+  vague:
+    - "Hi Khalid, how can I help you today?"
+    - "Is there anything else I should know?"
+  triggers:
+    late-payments: "How do your main contractors usually pay you?"
+    payroll: "What are your biggest costs each month?"
+    sharia: "Is there anything about how you bank that matters to you?"
+    supplier-debt: "Do you owe money to anyone at the moment?"
+
+arjun:
+  vague:
+    - "Hi Arjun, how can I help you today?"
+    - "Is there anything else I should know?"
+  triggers:
+    remittances: "What do you usually spend your money on each month?"
+    may-leave: "How long do you plan to stay in Qatar?"
+    gratuity: "Do you have other savings or benefits coming to you?"
+    property: "What are you saving for?"
+
+noora-hamad:
+  vague:
+    - "Hello, how can I help you both today?"
+    - "Is there anything else I should know?"
+  triggers:
+    housing-gap: "How are you planning to pay for the build?"
+    sharia: "Is there anything about how you bank that matters to you?"
+    bakery: "Could you tell me a bit about what each of you does for work?"
+    short-term: "How long would you be comfortable making repayments for?"
+
+mariam:
+  vague:
+    - "Hi Mariam, how can I help you today?"
+    - "Is there anything else I should know?"
+  triggers:
+    new-licence: "How long has the business been registered?"
+    no-cards: "How do your customers pay you?"
+    mixed-money: "How do you keep your business money separate from your own?"
+    seasonal: "Do your sales change during the year?"
+
+# Reworded questions from the audit of 2026-11-20 (never used to tune the content).
+# Run with: python scripts/leak_test.py --set reworded --runs 1
+reworded:
+  khalid:
+    late-payments:
+      - "How long do your main contractors usually take to pay you after you send an invoice?"
+      - "When a big contractor owes you money, how many days do you usually wait to get paid?"
+      - "Do your clients settle their bills quickly, or does the money come in slowly?"
+      - "Tell me about who owes you money and how long they normally take to pay."
+      - "Walk me through what happens between sending a bill and having the cash in your account."
+    payroll:
+      - "Has there been a time this year when it was hard to pay your workers on the day it was due?"
+      - "How do you manage paying your team each month, especially when money is tight?"
+      - "Have you ever had to delay salaries for your crew?"
+      - "What is the biggest pressure on you when payday comes around?"
+      - "Did you come close to missing any payments to your 38 workers recently?"
+    sharia:
+      - "Do you have any rules about the kind of financing you are willing to use?"
+      - "Is there anything in a loan contract that your faith would not allow you to accept?"
+      - "Would a conventional interest-based loan work for you, or do you need something else?"
+      - "How do you feel about paying or receiving interest on money?"
+      - "Are you looking for banking products that follow Islamic principles?"
+    supplier-debt:
+      - "Do you owe money to any of your material suppliers right now?"
+      - "How much do you currently owe your suppliers, roughly?"
+      - "Are there any outstanding bills with your suppliers that you are paying down?"
+      - "Tell me about what you still owe the people who supply your materials."
+      - "Is any part of the loan you want meant to clear what you already owe to suppliers?"
+  arjun:
+    remittances:
+      - "Do you send money home to your family regularly?"
+      - "How much do you usually transfer abroad each month?"
+      - "Which country does most of your money go to each month, and how do you send it?"
+      - "Are you happy with what you pay to move money to your family?"
+      - "Do you support anyone back home financially?"
+    may-leave:
+      - "How long do you think you will stay in Qatar?"
+      - "Do you have plans to move back home or to another country in the next few years?"
+      - "Would you need your savings to be easy to reach if you decided to leave?"
+      - "What does your timeline look like for working here?"
+      - "Are you planning to stay in Qatar long term, or is it a few years?"
+    gratuity:
+      - "Do you know what end-of-service payment you will get when you finish your contract?"
+      - "Have you thought about how you will use your gratuity when you leave?"
+      - "Is there a lump sum waiting for you when your job here ends?"
+      - "What does your employer owe you when you finally leave the company?"
+      - "Have you counted on any end-of-job payout in your savings plan?"
+    property:
+      - "Do you have a goal of owning a home someday?"
+      - "Would you ever want to buy an apartment here or back home?"
+      - "Is buying property part of your long-term plans?"
+      - "What would your dream home look like, and where would it be?"
+      - "Have you looked at buying a flat in the future?"
+  mariam:
+    new-licence:
+      - "How long has your business been registered?"
+      - "When did you get your trade licence?"
+      - "Is your commercial registration fairly new?"
+      - "How old is the business on paper?"
+      - "Did you start the shop recently, from a licensing point of view?"
+    no-cards:
+      - "How do your customers usually pay you?"
+      - "Do you accept card payments in the shop, or is it mostly transfers and cash?"
+      - "Have you ever lost a sale because someone wanted to pay by card?"
+      - "What payment methods do your buyers ask for most?"
+      - "Do customers ever tell you they cannot pay the way you accept money?"
+    mixed-money:
+      - "Which bank account do you use for the shop's sales?"
+      - "Do you keep your business money separate from your personal money?"
+      - "Is the money from orders going into your personal account?"
+      - "How do you track what the shop earns versus what you spend at home?"
+      - "Do you have a separate account for the business, or is everything in one place?"
+    seasonal:
+      - "Does your business have busy and quiet seasons?"
+      - "When do orders usually peak during the year?"
+      - "Are there months when sales drop off a lot?"
+      - "How does the shop's income change around holidays and summer?"
+      - "Which parts of the year are your best and worst for sales?"
+  noora-hamad:
+    housing-gap:
+      - "How much has the bank already approved for your house, and what does the build cost?"
+      - "Is the housing loan you qualified for enough to cover the whole build?"
+      - "What is the total estimate for building on your plot?"
+      - "Do you know how much you still need beyond the government housing support?"
+      - "Are you short of money for the house, and if so, by how much?"
+    sharia:
+      - "Do you prefer financing that follows Islamic rules?"
+      - "Would you only consider loans that do not charge interest?"
+      - "Are there any financing rules you must follow as a family?"
+      - "Would you rather use a Sharia-based home finance product?"
+      - "Is interest a problem for you when you think about borrowing?"
+    bakery:
+      - "Do you have any other work or side business alongside your job?"
+      - "Are you running anything from home in the evenings?"
+      - "Do you want a separate account for any extra income you make?"
+      - "Tell me about any projects you do outside your ministry job."
+      - "Is there a home business you would like to keep apart from your personal money?"
+    short-term:
+      - "How long do you want to take to pay off this loan?"
+      - "What is your target for being free of debt?"
+      - "Are you hoping to clear everything within a decade?"
+      - "How many years do you plan to repay for?"
+      - "Do you want to finish paying the house off quickly, or are you fine with a long term?"

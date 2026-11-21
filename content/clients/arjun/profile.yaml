@@ -1,0 +1,23 @@
+id: arjun
+name: Arjun
+intro: Expat engineer, West Bay
+difficulty: easy
+opening_line: "I want to save more."
+
+persona: >
+  Indian civil engineer, 32. Friendly, polite, a little careful with money. Answers fully when he trusts
+  the question, vaguely when it is too general.
+
+background: >
+  Has worked in Qatar for four years at an engineering firm in West Bay. Single, rents a flat with a colleague.
+
+known:
+  - label: Salary a month
+    value: QAR 20-25k
+  - label: In Qatar
+    value: 4 years
+  - label: With us
+    value: Salary account
+
+stated_needs:
+  - Wants to save more each month

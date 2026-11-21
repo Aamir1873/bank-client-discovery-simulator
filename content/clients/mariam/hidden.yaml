@@ -1,0 +1,44 @@
+hidden_needs:
+  - id: new-licence
+    label: New trade licence
+    fact: Her trade licence is less than a year old, so she does not qualify for standard business finance.
+    reveal_when: Asked how long the business has been registered, about her licence, or her business history.
+    keywords: [registered, licence, license, how long, when did you start, history, years]
+    while_closed: Says the shop has been popular for a while.
+    importance: critical
+
+  - id: no-cards
+    label: No card payments
+    fact: >
+      Customers pay by instant bank transfer or cash on delivery. She loses orders from people who want
+      to pay by card.
+    reveal_when: Asked how her customers pay.
+    keywords: [customers pay, payment, card, cash, transfer, checkout, how do they pay]
+    while_closed: Says customers love the products.
+    importance: critical
+
+  - id: mixed-money
+    label: Mixed money
+    fact: Personal and business money go through the same personal account.
+    reveal_when: Asked about her bookkeeping, accounts or how she keeps business money separate.
+    keywords: [account, accounts, bookkeeping, separate, records, statements, business money]
+    while_closed: Says she keeps an eye on everything herself.
+    importance: moderate
+
+  - id: seasonal
+    label: Uneven months
+    fact: Strong months before Eid and National Day, weak months in summer.
+    reveal_when: Asked whether sales change during the year or about seasons.
+    keywords: [season, seasonal, summer, Eid, busy months, quiet, every month, change]
+    while_closed: Says sales are growing.
+    importance: moderate
+
+suitable_products: [startup-biz]
+
+unsuitable_products:
+  - id: islamic-receivables
+    why: Needs 2 years of audited accounts and approved payers. Her licence is under a year old.
+  - id: conv-overdraft
+    why: Needs collateral and a trading history she does not have yet.
+  - id: islamic-personal
+    why: Personal finance for a business mixes her money even more, and it can't be used for business costs.

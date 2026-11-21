@@ -1,0 +1,23 @@
+id: mariam
+name: Mariam
+intro: Online gift and fragrance shop, Doha
+difficulty: medium
+opening_line: "I want a business loan to scale my Instagram shop."
+
+persona: >
+  Qatari, 27. Energetic and confident about the shop, vague about paperwork. Uses social media words,
+  not banking words, and asks what a term means if the student uses jargon.
+
+background: >
+  Sells gift boxes and fragrances through Instagram and delivers across Doha. Orders are growing.
+
+known:
+  - label: Business
+    value: Instagram shop, Doha
+  - label: Age
+    value: "27"
+  - label: With us
+    value: Personal account, 5 years
+
+stated_needs:
+  - Wants a business loan to grow the shop

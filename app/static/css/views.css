@@ -1,0 +1,84 @@
+/* Per-screen layout only. Look and feel lives in components.css. */
+.view { width: 100%; max-width: 1240px; margin: 0 auto; padding: 20px 22px 28px; }
+.lede { color: var(--mute); margin: 4px 0 16px; }
+.foot { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+.foot .group { display: flex; gap: 8px; flex-wrap: wrap; }
+.view > .error-line { margin-bottom: 14px; }
+
+/* 1 pick */
+.clients { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--gap); }
+.client-card { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+.client-card .who { display: flex; gap: 10px; align-items: center; }
+.client-card .who b { display: block; font-size: var(--text-md); }
+.client-card .who span { color: var(--mute); font-size: var(--text-sm); }
+.client-card .bt { margin-top: auto; }
+
+/* 1b brief */
+.brief { max-width: 520px; margin: 24px auto 0; }
+.figures { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+
+/* 2 interview */
+.view.wide { max-width: none; padding: 0; }
+.interview { display: grid; grid-template-columns: 240px minmax(0, 1fr) 300px; height: calc(100vh - 48px); }
+.interview > .panel { border-right: 1px solid var(--line); }
+.interview > .panel:last-child { border-right: 0; border-left: 1px solid var(--line); }
+.notes { flex: 1; display: flex; flex-direction: column; min-height: 140px; border-top: 1px solid var(--line); }
+.notes .textarea { flex: 1; margin: 0 13px 12px; resize: none; }
+.notes .help { margin: 0 13px 8px; color: var(--mute); font-size: var(--text-sm); }
+.chat { display: flex; flex-direction: column; min-height: 0; background: var(--page); }
+.chat-head { display: flex; align-items: center; gap: 9px; padding: 9px 16px; background: var(--surface); border-bottom: 1px solid var(--line); }
+.chat-head b { display: block; }
+.chat-head span { color: var(--mute); font-size: var(--text-sm); }
+.messages { flex: 1; overflow: auto; padding: 14px 18px; display: flex; flex-direction: column; gap: 8px; }
+.composer { background: var(--surface); border-top: 1px solid var(--line); padding: 10px 16px 11px; }
+.composer .line { display: flex; gap: 8px; align-items: flex-end; }
+.composer .textarea { min-height: var(--control); max-height: 120px; resize: none; }
+.composer .enter { white-space: nowrap; }
+.composer .meta { display: flex; justify-content: space-between; gap: 10px; margin-top: 6px; color: var(--mute); font-size: var(--text-sm); }
+.catalogue-tools { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+.catalogue { display: flex; flex-direction: column; gap: 6px; }
+
+/* 3 wrap-up */
+.wrapup { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 14px; align-items: start; }
+.wrapup .stack { display: flex; flex-direction: column; gap: 14px; }
+.picks-list { display: flex; flex-direction: column; gap: 4px; max-height: 460px; overflow: auto; }
+.reasons { display: flex; flex-direction: column; gap: 12px; }
+.from-notes { display: flex; flex-wrap: wrap; gap: 6px; }
+.from-notes span { font-size: var(--text-sm); padding: 2px 8px; border-radius: var(--r-pill); background: var(--soft); color: var(--ink-2); }
+
+/* 4 feedback */
+.fb-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+.found { display: flex; align-items: center; gap: 10px; }
+.found .big { font: 400 44px/1 var(--serif); font-variant-numeric: lining-nums tabular-nums; }
+.needs { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 14px; }
+.need { padding: 12px; display: flex; flex-direction: column; gap: 6px; }
+.need.missed { border-color: var(--red-line); }
+.need b { font-size: 13px; }
+.need .ask { margin-top: auto; padding-top: 6px; border-top: 1px solid var(--line); font-size: var(--text-sm); color: var(--ink-2); }
+.need .ask span { display: block; font-weight: 600; color: var(--mute); }
+.verdicts { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.areas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.area { padding: 14px; }
+.area h2 { display: flex; align-items: center; gap: 7px; margin-bottom: 8px; }
+.area ul { margin: 0; padding-left: 16px; display: flex; flex-direction: column; gap: 7px; color: var(--ink-2); }
+
+.loading { padding: 40px; text-align: center; color: var(--mute); }
+
+@media (max-width: 1024px) {
+  .interview { grid-template-columns: 220px minmax(0, 1fr); }
+  .interview > .panel:last-child { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--line); max-height: 60vh; }
+  .wrapup { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .view { padding: 16px 12px 24px; }
+  .interview { display: flex; flex-direction: column; height: auto; }
+  .interview > .panel { border-right: 0; border-bottom: 1px solid var(--line); }
+  .chat { order: -1; height: 70vh; }
+  .composer .textarea { min-height: 64px; }
+  .composer .enter { display: none; }
+  .interview > .panel:last-child { max-height: none; }
+  .areas { grid-template-columns: 1fr; }
+  .fb-top { flex-direction: column; align-items: flex-start; }
+  .found .big { font-size: 36px; }
+}

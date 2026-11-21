@@ -1,0 +1,40 @@
+hidden_needs:
+  - id: remittances
+    label: Money sent home
+    fact: Sends about QAR 7,000 a month to his family in Kerala and is annoyed by the transfer fees.
+    reveal_when: Asked about his monthly spending or outgoings, his family, or sending money abroad.
+    keywords: [family, send, home, transfer, abroad, India, Kerala, outgoings, spend]
+    while_closed: Says his rent and bills are normal.
+    importance: critical
+
+  - id: may-leave
+    label: May leave Qatar
+    fact: Expects to leave Qatar in 3 to 5 years, so he will not lock money away for long.
+    reveal_when: Asked about his future plans, how long he will stay, or his time horizon.
+    keywords: [future, plans, how long, stay, leave, years, long term, horizon]
+    while_closed: Says he likes his job.
+    importance: critical
+
+  - id: gratuity
+    label: End-of-service pay
+    fact: He will get an end-of-service gratuity when he leaves but has not planned around it.
+    reveal_when: Asked about other savings, benefits or money he will receive later.
+    keywords: [gratuity, end of service, benefits, other savings, pension]
+    while_closed: Says he has a little in his account.
+    importance: moderate
+
+  - id: property
+    label: Apartment dream
+    fact: Would like to buy an apartment in The Pearl or Lusail one day, where foreigners can buy.
+    reveal_when: Asked about his goals or what he is saving for.
+    keywords: [goal, goals, saving for, dream, buy, property, apartment, home]
+    while_closed: Says he just wants a bit more put aside.
+    importance: moderate
+
+suitable_products: [global-current]
+
+unsuitable_products:
+  - id: fixed-5y
+    why: Money is locked for 5 years and he may leave Qatar in 3 to 5. Leaving early loses the interest.
+  - id: conv-cashback-card
+    why: A card encourages spending. It does nothing for his savings or his transfer fees.

@@ -1,0 +1,102 @@
+/* Design tokens: the one place for colour, type, spacing and radius. Taken from the approved mockup
+   (ERP look: Inter for words, Instrument Serif for titles and numbers, soft-and-crisp buttons). */
+:root {
+  --page: #fafafa;
+  --surface: #ffffff;
+  --soft: #f4f4f6;
+  --line: #ececee;
+  --line-2: #e1e1e5;
+  --ink: #0a0a0b;
+  --ink-2: #3f3f46;
+  --mute: #66666e;
+  --accent: #007a8a;
+  --accent-soft: #e6f4f6;
+  --accent-ink: #0b5a65;
+  --ring: rgba(0, 122, 138, .14);
+  --green: #1d7044;
+  --green-bg: #e3f4ea;
+  --green-line: #9fd3b6;
+  --amber: #9a5b05;
+  --amber-bg: #fdf3e1;
+  --amber-line: #f1d9a8;
+  --amber-ink: #6b3f04;
+  --red: #b42318;
+  --red-bg: #fdecea;
+  --red-line: #f0b9b2;
+  --bubble-me: #0a0a0b;
+  --bubble-me-ink: #ffffff;
+  --bubble-me-mute: #b8b8bf;
+  --dim: rgba(10, 10, 11, .32);
+  --shadow-card: 0 1px 2px rgba(16, 24, 40, .04);
+  --shadow-app: 0 18px 50px -24px rgba(15, 23, 42, .28);
+  --shadow-dialog: 0 0 0 1px var(--line), 0 30px 70px -24px rgba(15, 23, 42, .45);
+
+  /* soft-and-crisp buttons (bold-co-erp, "Buttons on a redesigned page") */
+  --bt-shine: rgba(255, 255, 255, .75);
+  --bt-drop: 0 1px 1px rgba(16, 24, 40, .05);
+  --go-bg: #e7f6ef; --go-hov: #d4eee2; --go-edge: #2f9e74; --go-ink: #03503a;
+  --ink-bg: #eceef4; --ink-hov: #e0e3eb; --ink-edge: #5f6578; --ink-ink: #0e1014;
+  --out-bg: #ffffff; --out-hov: #f3f4f7; --out-edge: #bfc3cc; --out-ink: #0e1014;
+  --no-bg: #fdefed; --no-hov: #fbddd9; --no-edge: #dc5b50; --no-ink: #991a10;
+
+  --sans: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: "Instrument Serif", Georgia, serif;
+  --text: 12px;
+  --text-sm: 12px;
+  --text-md: 13.5px;
+  --h1: 26px;
+  --h2: 18px;
+  --num: 19px;
+
+  --r-sm: 8px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-pill: 999px;
+  --gap: 12px;
+  --pad: 14px;
+  --control: 32px;
+  --motion: 160ms;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --page: #151821; --surface: #1d212c; --soft: #232836; --line: #2c313d; --line-2: #3a4050;
+  --ink: #f4f5f8; --ink-2: #d4d8e1; --mute: #a3abb9;
+  --accent: #22d3ee; --accent-soft: #12303a; --accent-ink: #a5f3fc; --ring: rgba(34, 211, 238, .2);
+  --green: #4ee0a8; --green-bg: rgba(34, 192, 138, .14); --green-line: rgba(78, 224, 168, .5);
+  --amber: #f5c26b; --amber-bg: rgba(245, 194, 107, .12); --amber-line: rgba(245, 194, 107, .4); --amber-ink: #f8d79a;
+  --red: #ff8a80; --red-bg: rgba(239, 68, 68, .15); --red-line: rgba(255, 130, 130, .5);
+  --bubble-me: #f4f5f8; --bubble-me-ink: #0e1014; --bubble-me-mute: #5a5f6b;
+  --dim: rgba(0, 0, 0, .55);
+  --shadow-card: none; --shadow-app: none; --shadow-dialog: 0 0 0 1px var(--line);
+  --bt-shine: rgba(255, 255, 255, .07); --bt-drop: 0 0 0 transparent;
+  --go-bg: rgba(34, 192, 138, .14); --go-hov: rgba(34, 192, 138, .22); --go-edge: rgba(78, 224, 168, .8); --go-ink: #6cf2c1;
+  --ink-bg: rgba(238, 240, 245, .1); --ink-hov: rgba(238, 240, 245, .17); --ink-edge: rgba(238, 240, 245, .62); --ink-ink: #f4f5f8;
+  --out-bg: #232836; --out-hov: #2a3040; --out-edge: rgba(255, 255, 255, .3); --out-ink: #f4f5f8;
+  --no-bg: rgba(239, 68, 68, .15); --no-hov: rgba(239, 68, 68, .24); --no-edge: rgba(255, 130, 130, .8); --no-ink: #ffa4a4;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page: #151821; --surface: #1d212c; --soft: #232836; --line: #2c313d; --line-2: #3a4050;
+    --ink: #f4f5f8; --ink-2: #d4d8e1; --mute: #a3abb9;
+    --accent: #22d3ee; --accent-soft: #12303a; --accent-ink: #a5f3fc; --ring: rgba(34, 211, 238, .2);
+    --green: #4ee0a8; --green-bg: rgba(34, 192, 138, .14); --green-line: rgba(78, 224, 168, .5);
+    --amber: #f5c26b; --amber-bg: rgba(245, 194, 107, .12); --amber-line: rgba(245, 194, 107, .4); --amber-ink: #f8d79a;
+    --red: #ff8a80; --red-bg: rgba(239, 68, 68, .15); --red-line: rgba(255, 130, 130, .5);
+    --bubble-me: #f4f5f8; --bubble-me-ink: #0e1014; --bubble-me-mute: #5a5f6b;
+    --dim: rgba(0, 0, 0, .55);
+    --shadow-card: none; --shadow-app: none; --shadow-dialog: 0 0 0 1px var(--line);
+    --bt-shine: rgba(255, 255, 255, .07); --bt-drop: 0 0 0 transparent;
+    --go-bg: rgba(34, 192, 138, .14); --go-hov: rgba(34, 192, 138, .22); --go-edge: rgba(78, 224, 168, .8); --go-ink: #6cf2c1;
+    --ink-bg: rgba(238, 240, 245, .1); --ink-hov: rgba(238, 240, 245, .17); --ink-edge: rgba(238, 240, 245, .62); --ink-ink: #f4f5f8;
+    --out-bg: #232836; --out-hov: #2a3040; --out-edge: rgba(255, 255, 255, .3); --out-ink: #f4f5f8;
+    --no-bg: rgba(239, 68, 68, .15); --no-hov: rgba(239, 68, 68, .24); --no-edge: rgba(255, 130, 130, .8); --no-ink: #ffa4a4;
+    color-scheme: dark;
+  }
+}
+
+@media (max-width: 760px) {
+  :root { --control: 44px; --text: 13px; --h1: 23px; }
+}
